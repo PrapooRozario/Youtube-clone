@@ -17,32 +17,40 @@
         <img src="assets/Youtube.svg" alt="" class="w-14" />
         <div class="flex gap-2 w-full items-center">
           <input
+            id="search-input"
             type="text"
+            onclick="search()"
             class="bg-[#181818] border w-full border-[#474747] flex items-center placeholder-[#AAAAAA] gap-2 pl-4 rounded-full text-[#AAAAAA] py-2"
             placeholder="Search"
           />
-          <button><img src="assets/Search.svg" alt="" /></button>
+          <button id="search-btn">
+            <img src="assets/Search.svg" alt="" />
+          </button>
         </div>
       </nav>
       <hr class="mt-3 border-[#383838]" />
       <section class="mt-3 space-x-3">
         <button
           class="px-5 py-2 rounded-full bg-[#383838] text-white border border-[#474747]"
+          id="all-btn"
         >
           All
         </button>
         <button
           class="px-5 py-2 rounded-full bg-[#383838] text-white border border-[#474747]"
+          id="music-btn"
         >
           Music
         </button>
         <button
           class="px-5 py-2 rounded-full bg-[#383838] text-white border border-[#474747]"
+          id="comedy-btn"
         >
           Comedy
         </button>
         <button
           class="px-5 py-2 rounded-full bg-[#383838] text-white border border-[#474747]"
+          id="drawing-btn"
         >
           Drawing
         </button>
@@ -50,34 +58,7 @@
       <hr class="mt-3 border-[#383838]" />
     </header>
     <main class="w-11/12 mx-auto mt-5">
-      <section class="flex gap-5">
-        <div class="w-1/4">
-          <img src="assets/Thumbnail.png" alt="Thumbnail" class="w-full" />
-
-          <div class="mt-3">
-            <div class="flex gap-3">
-              <div>
-                <img src="assets/Ellipse 4.svg" alt="" class="w-16 mt-[5px]" />
-              </div>
-
-              <div>
-                <h2 class="text-white font-semibold">
-                  Bulbuli | Coke Studio Bangla | Season One | Ritu Raj X Nandita
-                </h2>
-                <p class="gap-2 flex text-[#AAAAAA] mt-4">
-                  Coke Studio <img src="assets/verify.svg" alt="" class="w-4" />
-                </p>
-
-                <p class="gap-2 flex text-[#AAAAAA]">
-                  1.2 M views <img src="assets/Ellipse 5.svg" alt="" /><span
-                    >3 days ago</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="grid grid-cols-4 gap-5" id="videos-container"></section>
     </main>
     <script src="Javascripts/video.js"></script>
   </body>
